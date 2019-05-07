@@ -1,0 +1,15 @@
+{
+  "name": "saml-idp-server",
+  "version": "1.0.0",
+  "description": "Simple Saml IDP for development purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./node_modules/saml-idp/app.js --acs http://acme.okta.com/auth/saml20/exampleidp --aud https://www.okta.com/saml2/service-provider/spf5aFRRXFGIMAYXQPNV"
+  },
+  "author": "Pasi Salo",
+  "license": "ISC",
+  "dependencies": {
+    "saml-idp": "^1.1.0"
+  }
+}
