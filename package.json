@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/saml-idp/app.js --acs http://acme.okta.com/auth/saml20/exampleidp --aud https://www.okta.com/saml2/service-provider/spf5aFRRXFGIMAYXQPNV"
+    "start": "node ./src/startServer.js "
   },
   "author": "Pasi Salo",
   "license": "ISC",
   "dependencies": {
+    "@types/ramda": "^0.27.44",
+    "ramda": "^0.27.1",
     "saml-idp": "^1.1.0"
   }
 }
