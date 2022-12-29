@@ -1,2 +1,13 @@
+# git
+.git
+.gitignore
+.DS_Store
+*.pem
+
+# docker
+.dockerignore
+Dockerfile
+
+# node
 node_modules
 npm-debug.log

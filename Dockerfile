@@ -1,15 +1,15 @@
-FROM node:16
-
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
-RUN ./create-cert.sh
+FROM node:18-alpine3.17
 
 EXPOSE 7000
 
-CMD [ "npm", "start" ]
+RUN \
+  apk update && \
+  apk add openssl
+
+COPY . /application
+WORKDIR /application
+
+RUN \
+  yarn
+
+ENTRYPOINT [ "/application/scripts/entrypoint.sh" ]
