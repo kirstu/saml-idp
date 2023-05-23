@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/ramda": "^0.27.44",
     "ramda": "^0.27.1",
+    "saml": "^3.0.1",
     "saml-idp": "^1.1.0"
   }
 }

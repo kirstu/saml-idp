@@ -68,6 +68,5 @@ const metadata = [
 ];
 
 module.exports = {
-  user,
-  metadata,
+  config: { user, metadata },
 };
