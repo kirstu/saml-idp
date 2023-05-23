@@ -23,3 +23,5 @@
 1. Configure SSO settings in your application
     1. Add SSO Endpoint (default is `http://localhost:7000/saml/sso`)
     1. Copy the generated public cert to the application settings
+1. Add `issuer` to the root of the object exported from `config.local.js`
+    - `issuer` should point to the `SAML consumer URL` of your application
