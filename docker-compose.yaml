@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+  saml-idp:
+    container_name: saml-idp
+    image: saml-idp
+    build: .
+    environment:
+      - HOST=0.0.0.0
+    ports:
+      - 127.0.0.1:7000:7000
