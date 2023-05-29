@@ -4,7 +4,9 @@
 
 The easiest way to run this is with `docker-compose`
 
-Just run `docker-compose up` and you should be good to go.
+Just run `docker-compose up` and the container should be good to go.
+
+To config your application, see [Use the local SSO in your application](#use-the-local-sso-in-your-application)
 
 ## With Docker
 
@@ -27,24 +29,14 @@ Just run `docker-compose up` and you should be good to go.
 1. Start Saml Idp server with `npm run start`
    - For more configuration options see [`https://www.npmjs.com/package/saml-idp`](https://www.npmjs.com/package/saml-idp)
 
-# Use the local SSO in your application
+## Use the local SSO in your application
 
 1. Configure SSO settings in your application
    1. Add SSO Endpoint (default is `http://localhost:7000/saml/sso`)
    1. Copy the generated public cert to the application settings
 1. Add `issuer` to the root of the object exported from `config.local.js`
-   - # `issuer` should point to the `SAML consumer URL` of your application
+   - `issuer` should point to the `SAML consumer URL` of your application
      `docker build -t saml-idp .`
-
-To create a container of the built image and run it:
-
-`docker run -it --name saml-idp saml-idp`
-
-The above command outputs the generated public certificate to std-out. You may have to scroll up to reveal it. The certificate isn't renegerated on subsequent runs. It's still logged, though.
-
-On subsequent starts, simply use:
-
-`docker start saml-idp`
 
 ## Generating cert & key manually
 
